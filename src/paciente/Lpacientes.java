@@ -16,9 +16,10 @@ public class Lpacientes extends Pacientes{
 
     public Lpacientes(int numCedu, String name, String date, Date horallega, String clasificacion, Date horasali) {
         super(numCedu, name, date, horallega, clasificacion, horasali);
+        this.ListaPa= new ArrayList<>();
     }
 
-
+  
   
     private void addPaciente(Pacientes paci){
         if ("Rojo".equals(this.clasificacion)) {
@@ -30,14 +31,16 @@ public class Lpacientes extends Pacientes{
         if ("verde".equals(this.clasificacion)) {
             ListaPa.add(paci);
         }
+        
     }
     
-    private boolean atenderPaci(Pacientes paci, boolean atendido){
-        for (Pacientes ListaPa1 : ListaPa) {
+    private boolean atenderPaci(Pacientes paci, boolean atendido ,Date horasali){
+        for (int i = 0; i <ListaPa.size(); i++) {
             if (atendido==true) {
-                return " ya se puede ir ".equals(atendido);
+              horasali.setDate(i);
             } else {
             }
+            
         }
         return false;
        

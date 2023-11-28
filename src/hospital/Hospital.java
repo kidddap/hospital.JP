@@ -4,6 +4,8 @@
  */
 package hospital;
 
+import paciente.Lpacientes;
+
 /**
  *
  * @author Student
@@ -14,6 +16,7 @@ public class Hospital {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+      
        
     }
     
